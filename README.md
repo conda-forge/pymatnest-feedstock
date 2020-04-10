@@ -3,7 +3,7 @@ About pymatnest
 
 Home: https://github.com/libAtoms/pymatnest
 
-Package license: GPL-2.0-only
+Package license: GPL-3.0-only
 
 Feedstock license: BSD 3-Clause
 
