@@ -7,12 +7,12 @@ package:
 
 source:
   url: https://github.com/libAtoms/{{ name }}/archive/master.zip
-  sha256: 0a7b0afb3ef739cb73f6c89f7c6091d954b3229feb75bfee48b6fbfe2862e2e7
+  sha256: dbf484f82fef397e8c4cab8769fc42e299ad1e0824d8f45362c835fc319c87d3
   patches:
     - arch.patch
 
 build:
-  number: 0
+  number: 1
   skip: true  # [not linux]
 
 requirements:
@@ -35,9 +35,9 @@ test:
 
 about:
   home: https://github.com/libAtoms/pymatnest
-  license: GPL-2.0-only
+  license: GPL-3.0-only
   license_family: GPL
-  license_file: LICENSE.txt
+  license_file: LICENSE
   summary: 'Nested Sampling code'
 
   description: |
