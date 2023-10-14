@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://github.com/libAtoms/{{ name }}/archive/master.zip
-  sha256: 8cc5b2bec39a9a88c91b76f3c656c051fc49a92274d1a6156ae85a9dcf86a28b
+  sha256: c048ea2c885eed7d92e25d00988eec09b452bfc076ee329a1d1b600e16eb83be
   patches:
     - arch.patch
 
