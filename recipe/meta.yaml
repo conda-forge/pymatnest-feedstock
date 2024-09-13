@@ -12,12 +12,13 @@ source:
     - arch.patch
 
 build:
-  number: 6
+  number: 7
   skip: true  # [not linux]
 
 requirements:
   build:
     - {{ compiler('c') }}
+    - {{ stdlib("c") }}
     - {{ compiler('fortran') }}
     - make
   host:
