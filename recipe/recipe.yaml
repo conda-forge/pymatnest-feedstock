@@ -1,0 +1,61 @@
+schema_version: 1
+
+context:
+  name: pymatnest
+  version: "0.0.1"
+
+package:
+  name: ${{ name|lower }}
+  version: ${{ version }}
+
+source:
+  url: https://github.com/libAtoms/${{ name }}/archive/master.zip
+  sha256: f966c49d57074d5977277b106fc59d7fa3ab5a6e73d3d3c13c3e66e6e0592469
+  patches:
+    - arch.patch
+
+build:
+  number: 9
+  skip: not linux
+
+requirements:
+  build:
+    - ${{ compiler('c') }}
+    - ${{ stdlib("c") }}
+    - ${{ compiler('fortran') }}
+    - make
+  host:
+    - python
+  run:
+    - python
+    - ase
+    - psutil
+    - mpi4py
+    - numpy
+
+tests:
+  - python:
+      imports:
+        - ns_analyse
+        - ns_run
+      pip_check: false
+
+about:
+  license: GPL-3.0-only
+  license_file: LICENSE
+  summary: Nested Sampling code
+  description: |
+    The pymatnest package is a software library for carrying out
+    nested sampling calculations. It can be used to explore the
+    energy landscape of different materials (both clusters and
+    bulk materials), calculate thermodynamic variables at arbitrary
+    temperatures, locate phase transitions and calculate the phase
+    diagram. It can be used with LAMMPS, QUIP, and the supplied
+    fortran models, and both with MC and MD.
+  homepage: https://github.com/libAtoms/pymatnest
+  repository: https://github.com/libAtoms/pymatnest
+  documentation: http://libatoms.github.io/pymatnest/
+
+extra:
+  recipe-maintainers:
+    - jan-janssen
