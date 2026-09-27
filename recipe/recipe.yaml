@@ -15,7 +15,7 @@ source:
     - arch.patch
 
 build:
-  number: 9
+  number: 10
   skip: not linux
 
 requirements:
